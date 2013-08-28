@@ -22,15 +22,19 @@ package org.apache.cordova.example;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
+import co.usersource.annoplugin.AnnoPlugin;
+
 public class example extends DroidGap
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
+    	
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
         super.loadUrl(Config.getStartUrl());
         //super.loadUrl("file:///android_asset/www/index.html")
+        AnnoPlugin.setEnableGesture(this, R.id.GESTURE_ID, true);
     }
 }
 
