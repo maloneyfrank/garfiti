@@ -29,12 +29,17 @@ public class example extends DroidGap
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-    	
-        super.onCreate(savedInstanceState);
-        // Set by <content src="index.html" /> in config.xml
+    	 super.onCreate(savedInstanceState);
+         // Set by <content src="index.html" /> in config.xml
+    	 
+    	 
+    	setContentView(R.layout.main);
+    	AnnoPlugin.setEnableGesture(this, R.id.GESTURE_ID, true);
+      
         super.loadUrl(Config.getStartUrl());
         //super.loadUrl("file:///android_asset/www/index.html")
-        AnnoPlugin.setEnableGesture(this, R.id.GESTURE_ID, true);
+       
+        
     }
 }
 

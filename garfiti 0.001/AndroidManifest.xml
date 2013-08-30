@@ -49,10 +49,14 @@
     <uses-permission android:name="com.android.email.permission.READ_ATTACHMENT"/>
 	<uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"/>
 
+	    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
 
     <application android:icon="@drawable/icon" android:label="@string/app_name"
         android:hardwareAccelerated="true"
-        android:debuggable="true">
+        android:allowBackup = "true">
+        
+       <activity android:name="co.usersource.annoplugin.view.FeedbackEditActivity"></activity>
+        
         <activity android:name="example" android:label="@string/app_name"
                 android:theme="@android:style/Theme.Black.NoTitleBar"
                 android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale">
@@ -70,9 +74,8 @@
                 android:pathPattern=".*.txt" />
         </intent-filter>
         </activity>
-        <activity android:name="co.usersource.plugin.view.FeedbackEditActivity" />
-        
+   
     </application>
 
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
+
 </manifest> 
